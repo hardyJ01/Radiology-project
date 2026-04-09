@@ -523,19 +523,6 @@ severity         ENUM('low', 'moderate', 'high', 'normal')
 bounding_box     JSONB    (optional)
 ```
 
----
-
-## 🌿 Git Workflow
-
-We follow **GitHub Flow** with a `develop` integration branch.
-
-```
-main          ← production only, protected, requires PR + 1 review
-  └── develop ← team integration branch, protected
-        ├── feature/auth-endpoints
-        ├── feature/upload-ui
-        ├── feature/gitcxr-inference
-        └── hotfix/fix-jwt-expiry
 ```
 
 ### Daily workflow
@@ -559,30 +546,6 @@ git push origin feature/your-feature-name
 git checkout develop && git pull
 git branch -d feature/your-feature-name
 ```
-
-### Commit message format
-```
-feat:      new feature
-fix:       bug fix
-chore:     config, dependencies, setup
-refactor:  code restructure (no behaviour change)
-test:      adding or fixing tests
-docs:      documentation only
-```
-
----
-
-## 📅 Sprint Plan
-
-| Sprint | Duration | Goal | Owner |
-|---|---|---|---|
-| **Sprint 1** | Week 1–2 | Project setup, DB schema, auth endpoints, JWT | Lead |
-| **Sprint 2** | Week 3–4 | S3 upload, DICOM converter, MIMIC-CXR-JPG pipeline + LoRA fine-tuning (parallel) | Lead + AI/ML |
-| **Sprint 3** | Week 5–6 | GIT-CXR model loading, INT8 quant, Celery queue, findings storage | AI/ML + Lead |
-| **Sprint 4** | Week 7–8 | Report generation, PDF export, report history API | Lead |
-| **Sprint 5** | Week 9–10 | React frontend — auth screens, upload UI, report viewer | Frontend |
-| **Sprint 6** | Week 11–12 | Admin dashboard, notifications, polish, bug fixes | All |
-| **Sprint 7** | Week 13–14 | Security audit, performance testing, deployment, UAT | DevOps + All |
 
 ---
 
@@ -619,19 +582,5 @@ Update status as: 🔲 Not started → 🔄 In progress → ✅ Done
 
 ---
 
-## 🆘 Common Issues
-
-| Problem | Fix |
-|---|---|
-| `huggingface-cli: command not found` | Run `pip install -U "huggingface_hub[cli]"` then `python -c "from huggingface_hub import login; login()"` |
-| `PyTorch was not found` | Run `pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu` |
-| `alembic upgrade head` fails | Make sure Docker containers are running: `docker compose up -d` |
-| Port 8000 already in use | `lsof -i :8000` then kill the PID, or use `--port 8001` |
-| `(.venv)` not showing in terminal | Re-run `source .venv/bin/activate` (Mac/Linux) or `.venv\Scripts\activate` (Windows) |
-| CORS error in browser | Check `VITE_API_BASE_URL` in `.env.local` matches your backend port |
-
----
-
-> **Questions?** Open a GitHub Discussion or message the lead directly.
 > 
 > *Last updated: April 2026 — RadiologyAI Engineering Team*
