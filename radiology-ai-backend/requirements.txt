@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+alembic
+python-dotenv
+psycopg2-binary
+pydantic[email]
+torch
+transformers
+peft
+bitsandbytes
+celery
+redis

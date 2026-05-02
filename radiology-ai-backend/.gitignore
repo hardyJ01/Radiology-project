@@ -1,0 +1,109 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environments
+.venv
+*.venv
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-workspace
+*.sublime-project
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+
+# Alembic
+alembic/versions/__pycache__/
+
+# ML Models and weights
+*.pth
+*.pt
+*.safetensors
+app/ai/weights/checkpoint-*/
+app/ai/weights/*/checkpoint-*/
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Editor directories and files
+.history/
+*.bak
+
+# Virtual Environments
+.venv/
+venv/
+env/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+alembic/__pycache__/
+
+# Environment Variables (CRITICAL: Do not upload .env!)
+.env
+
+
+# Logs and Databases
+logs/
+*.log
+*.sqlite3
+*.db
+/alembic/versions/__pycache__/
+/alembic/versions/*.log
+alembic/versions/*.db
+alembic/
